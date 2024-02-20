@@ -12,6 +12,7 @@ body{
     font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";/*フォントを指定する*/
     line-height: 1.7;/*行間を空ける*/
     color: #3D3D3D;/*文字の色を変更する*/
+    overflow-x: hidden;
 }
 h2{
 	color: #48A6B7;
