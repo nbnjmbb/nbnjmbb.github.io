@@ -45,7 +45,7 @@ li{
 /*------main-visual-----*/
 
 #main-visual {
-	background: url("image/ttl.png") center no-repeat;
+	background: url("ttl.png") center no-repeat;
 	background-size: 800px;
 	position: relative;
 	height: 800px;
