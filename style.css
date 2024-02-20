@@ -1,0 +1,604 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+    padding: 0;
+}
+html{
+    font-size:100%;/*ユーザーの設定した文字サイズを正しく反映*/
+	scroll-behavior: smooth;
+}
+body{
+    font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";/*フォントを指定する*/
+    line-height: 1.7;/*行間を空ける*/
+    color: #3D3D3D;/*文字の色を変更する*/
+}
+h2{
+	color: #48A6B7;
+}
+a{
+    text-decoration: none;/*テキストの装飾を無効化する*/
+	color: #48A6B7;
+}
+img{
+    max-width: 100%;/*画像の大きさを最適化する*/
+}
+div {
+    display: block;
+}
+li{
+	list-style: none;
+}
+#wrapper {
+    margin: 0 auto;
+	width: 100%;
+	background: repeating-linear-gradient(300deg, #D5ECF1, #D5ECF1 50px, #E4F3F6 50px, #E4F3F6 100px);
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 400;
+}
+.inner {
+    margin: 0 auto;
+    max-width: 1200px;
+	min-width: 800px;
+    position: relative;
+}
+
+/*------main-visual-----*/
+
+#main-visual {
+	background: url("image/ttl.png") center no-repeat;
+	background-size: 800px;
+	position: relative;
+	height: 800px;
+}
+
+/*------animation-----*/
+
+.anime-img1{
+	position: absolute;
+	top: 25%;
+	left: 10%;
+    animation-name:anime-img1;   /* アニメーション名の指定 */
+    animation-delay:0s;   /* アニメーションの開始時間指定 */
+    animation-duration: 6s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+ 
+@keyframes anime-img1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0) rotate(-360deg);
+  }
+}
+
+.anime-img2{
+	position: absolute;
+	top: 60%;
+	left: 5%;
+    animation-name:anime-img2;   /* アニメーション名の指定 */
+    animation-delay:1s;   /* アニメーションの開始時間指定 */
+    animation-duration: 6s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+ 
+@keyframes anime-img2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.anime-img3{
+	position: absolute;
+	top: 30%;
+	right: 5%;
+    animation-name:anime-img3;   /* アニメーション名の指定 */
+    animation-delay:2s;   /* アニメーションの開始時間指定 */
+    animation-duration: 6s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+ 
+@keyframes anime-img3 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.anime-img4{
+	position: absolute;
+	top: 65%;
+	right: 10%;
+    animation-name:anime-img4;   /* アニメーション名の指定 */
+    animation-delay:3s;   /* アニメーションの開始時間指定 */
+    animation-duration: 6s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+ 
+@keyframes anime-img4 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0) rotate(-360deg);
+  }
+}
+
+.anime-img5{
+	position: absolute;
+	top: 85%;
+	left: 30%;
+    animation-name:anime-img5;   /* アニメーション名の指定 */
+    animation-delay:4s;   /* アニメーションの開始時間指定 */
+    animation-duration: 6s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+ 
+@keyframes anime-img5 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+/*------head------*/
+
+#span{
+	color: #F5C635;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+}
+
+.hamburger {
+	max-width: 100%;
+	right: 0;
+	line-height: 4em;
+	background: rgba(255,255,255,0.9);
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.hamburger .btn-gNav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 12;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #48A6B7;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger .btn-gNav span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger .btn-gNav.open span:nth-child(1) {
+    background: #ffffff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hamburger .btn-gNav.open span:nth-child(2),
+.hamburger .btn-gNav.open span:nth-child(3) {
+    top: 6px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.btn-gNav {
+    display: none;
+}
+
+.gNav .gNav-menu {
+    display: flex;
+	justify-content: flex-end;
+}
+
+.gNav .gNav-menu li {
+  margin-right: 30px;
+}
+
+.gNav .gNav-menu a:hover{
+  color: #F5C635;
+}
+
+@media screen and (max-width: 1000px) {
+    .btn-gNav {
+        display: block;
+    }
+
+    .gNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.9);
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .gNav.open {
+        right: 0;
+    }
+
+    .gNav .gNav-menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        /*justify-content: center;*/
+    }
+
+    .gNav .gNav-menu li {
+        width: 60%;
+		margin: 0 auto;
+        padding: 15px;
+        border-bottom: #888 1px solid;
+    }
+
+}
+
+/*------section------*/
+
+section{
+	padding: 50px;
+	margin-bottom: 100px;
+	background: #fff;
+	border-radius: 1em;
+}
+
+#news h2{
+	text-align: center;
+}
+
+#news dl{
+	margin: 0 auto;
+	padding: 10px;
+	width:  75%;
+	display: flex;
+	flex-wrap: wrap;
+}
+#news dt {
+	padding: 1em;
+	width: 40%;
+	border-bottom: solid 1px #ccc;
+}
+#news dd {
+	padding: 1em;
+	width: 60%;
+	border-bottom: solid 1px #ccc;
+}
+
+#news a:hover{
+	opacity: 0.6;
+}
+
+#about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: relative;
+}
+
+#about-txt{
+	max-width: 45%;
+}
+
+#about-txt h2{
+	margin: 1.2em 0;
+}
+
+#about-txt h3{
+	margin-bottom: 1em;
+	color: #F5C635;
+}
+
+#about .deco{
+	position: absolute;
+	top: -90px;
+	right: 50px;
+}
+
+#impression{
+	position: relative;
+}
+
+#impression h2{
+	text-align: center;
+}
+
+#impression-box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#impression-box img{
+	margin-top: 50px;
+}
+
+#impression .deco{
+	position: absolute;
+	bottom: -40px;
+	right: 60px;
+}
+
+#detail {
+	position: relative;
+}
+
+#detail h2{
+	text-align: center;
+}
+
+#detail-inner{
+	width: 90%;
+	margin: 0 auto 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#detail-img1{
+	margin: 20px 0 30px -50px ;
+}
+
+#detail-img2{
+	margin-top: 50px;
+}
+
+#detail h3{
+	margin: 1.2em 0;
+}
+
+#detail-price{
+	color: #48A6B7;
+	margin-top: 2.5em;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#detail-btn{
+	margin-right: -2.5em;
+	color: #F5C635;
+	background: #FFF;
+	border: #48A6B7 solid 2px;
+	width: 7em;
+	height: 2em;
+	text-align: center;
+	border-radius: 999px;
+}
+#detail-btn {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#detail-btn::after {
+  background: #48A6B7;
+  border-radius:  0 999px 999px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+#detail-btn:hover {
+  color: #FFF;
+}
+#detail-btn:hover::after {
+  transform: scale(1, 1);
+}
+
+#play{
+	text-align: center;
+}
+
+#play h2{
+	margin-bottom: 1.5em;
+}
+
+#play-inner{
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+#sticker-inner{
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+#sticker h2{
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+
+#sticker-img{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 0;
+	justify-content: space-around;
+	margin-bottom: 2em;
+}
+
+#credit{
+	text-align: center;
+	position: relative;
+}
+
+#credit .deco{
+	position: absolute;
+	top: -40px;
+	left: 80px;
+}
+
+#credit h2{
+	margin-bottom: 1.5em;
+}
+
+
+/*------footer------*/
+
+footer{
+	height: 180px;
+	padding: 1.2em 3.5em;
+	background: repeating-linear-gradient(300deg, #6CC6D6, #6CC6D6 50px, #4FBECB 50px, #4FBECB 100px);
+}
+
+#foot-nav ul{
+	color: #fff;
+	line-height: 2em;
+}
+
+#foot-nav a{
+	color: #fff;
+}
+
+#foot-nav a:hover{
+	opacity: 0.6;
+}
+
+
+@media screen and (max-width: 800px) {
+	img{
+		height: auto;
+	}
+	section{
+		max-width: 100vw;
+	}
+	.anime{
+		display: none;
+	}
+	#main-visual {
+	background-size: 85vw;
+	height: 60vh;
+	}
+	#news dl{
+	width:  100%;
+	}
+	#about-txt{
+	max-width: 100%;
+	}
+	#detail-btn{
+	margin-right: 0;
+	}
+	#play-inner{
+		max-width: 100vw;
+	}
+	#sticker img{
+		max-width: 35vw;
+	}
+	.deco{
+		max-width: 5em;
+	}
+	
+}
+
+
+
+
+/* --フェードアップ-- */
+.fadeUpTrigger{
+opacity: 0;
+}
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
